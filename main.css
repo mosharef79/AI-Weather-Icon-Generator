@@ -1,0 +1,164 @@
+/* General Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
+
+body {
+  background: linear-gradient(to top right, #89f7fe, #66a6ff);
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.container {
+  background: white;
+  padding: 30px;
+  border-radius: 20px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+  width: 90%;
+  max-width: 500px;
+  text-align: center;
+  animation: fadeIn 1s ease-in;
+}
+
+header h1 {
+  font-size: 2rem;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+header p {
+  font-size: 0.95rem;
+  color: #666;
+  margin-bottom: 20px;
+}
+
+.search-section {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.search-section input {
+  padding: 10px;
+  width: 70%;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  font-size: 1rem;
+  transition: all 0.3s ease;
+}
+
+.search-section input:focus {
+  outline: none;
+  border-color: #66a6ff;
+  box-shadow: 0 0 5px #66a6ff;
+}
+
+.search-section button {
+  padding: 10px 15px;
+  background-color: #66a6ff;
+  color: white;
+  border: none;
+  border-radius: 10px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.search-section button:hover {
+  background-color: #5597e5;
+}
+
+.weather-display {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+}
+
+.icon img {
+  width: 100px;
+  height: 100px;
+  animation: bounce 2s infinite;
+}
+
+.details h2 {
+  font-size: 1.5rem;
+  color: #444;
+}
+
+.details p {
+  font-size: 1.1rem;
+  color: #555;
+}
+
+footer {
+  margin-top: 30px;
+  font-size: 0.9rem;
+  color: #888;
+}
+
+/* Animations */
+@keyframes bounce {
+  0%, 100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+@keyframes fadeIn {
+  0% {
+    transform: scale(0.9);
+    opacity: 0;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+ .icon-wrapper {
+  position: relative;
+  display: inline-block;
+  text-align: center;
+}
+
+.main-img {
+  width: 100px;
+  height: auto;
+  border-radius: 12px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.2);
+}
+
+/* Animated mini icons */
+.floating-icon {
+  position: absolute;
+  top: 0;
+  font-size: 24px;
+  animation: moveRight 6s linear infinite;
+  opacity: 0.8;
+}
+
+.icon1 { left: -40px; animation-delay: 0s; }
+.icon2 { left: -60px; animation-delay: 1s; }
+.icon3 { left: -80px; animation-delay: 2s; }
+
+@keyframes moveRight {
+  0% {
+    transform: translateX(0);
+    opacity: 0.5;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    transform: translateX(200px);
+    opacity: 0;
+  }
+}

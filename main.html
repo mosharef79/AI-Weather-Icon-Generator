@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Dynamic Weather App</title>
+  <link rel="stylesheet" href="main.css" />
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1>🌦️ Weather Forecast</h1>
+      <p>Check real-time weather with dynamic icons</p>
+    </header>
+
+    <section class="search-section">
+      <input type="text" id="cityInput" placeholder="Enter city name..." />
+      <button id="getWeatherBtn">Get Weather</button>
+    </section>
+
+    <section class="weather-display">
+      <!-- 🧼 Clean image container for JavaScript to update -->
+      <div class="icon" id="weatherIcon"></div>
+
+      <div class="details">
+        <h2 id="cityName">City Name</h2>
+        <p><strong>Temperature:</strong> <span id="temperature">--</span>°C</p>
+        <p><strong>Humidity:</strong> <span id="humidity">--</span>%</p>
+        <p><strong>Condition:</strong> <span id="description">--</span></p>
+      </div>
+    </section>
+
+    <footer>
+      <p>&copy; 2025 Dynamic Weather App</p>
+    </footer>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
